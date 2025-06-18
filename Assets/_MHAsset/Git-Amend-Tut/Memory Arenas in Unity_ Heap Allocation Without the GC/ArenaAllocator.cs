@@ -32,7 +32,7 @@ public unsafe class ArenaAllocator : IDisposable {
     /// Current offset into the buffer where the next allocation will occur.
     /// This effectively tracks how much of the arena has been used.
     /// </summary>
-    int offset;
+    public int offset;
     
     /// <summary>
     /// Total size of the arena in bytes. Once offset reaches this value,

@@ -43,6 +43,13 @@ public unsafe class Example : MonoBehaviour {
     CraftSimulator simulator;
 
     void Start() {
+        //Git_Amend_Example();
+        DemonstrateReuseFeature();
+    }
+
+
+    void Git_Amend_Example()
+    {
         // Initialize all systems
         book = new RecipeBook();
         inventory = new Inventory();
@@ -84,6 +91,47 @@ public unsafe class Example : MonoBehaviour {
         // Reset arena for potential reuse (makes all allocated memory available again)
         // This is much faster than individual deallocations and produces zero GC
         arena.Reset();
+    }
+    
+    void DemonstrateReuseFeature() {
+        arena = new ArenaAllocator(1024);
+    
+        // ========== PHASE 1: Create CraftNodes ==========
+        CraftNode* node1 = arena.Alloc<CraftNode>();
+        node1->outputType = ItemType.IronSword;
+        node1->amountNeeded = 5;
+    
+        CraftNode* node2 = arena.Alloc<CraftNode>();
+        node2->outputType = ItemType.IronIngot;
+        node2->amountNeeded = 10;
+    
+        Debug.Log($"Before Reset - Node1: {node1->outputType}, Amount: {node1->amountNeeded}");
+        Debug.Log($"Before Reset - Node2: {node2->outputType}, Amount: {node2->amountNeeded}");
+        Debug.Log($"Arena offset: {arena.offset}"); // Will show ~128 bytes used
+    
+        // ========== PHASE 2: Reset Arena ==========
+        arena.Reset(); // ONLY resets offset to 0
+    
+        Debug.Log($"After Reset - Arena offset: {arena.offset}"); // Shows 0
+    
+        // ========== PHASE 3: Data Still Exists! ==========
+        // Old pointers still point to same memory addresses
+        Debug.Log($"After Reset - Node1 STILL: {node1->outputType}, Amount: {node1->amountNeeded}");
+        Debug.Log($"After Reset - Node2 STILL: {node2->outputType}, Amount: {node2->amountNeeded}");
+        // Data is still there! Just the offset was reset!
+    
+        // ========== PHASE 4: New Allocation Overwrites ==========
+        CraftNode* newNode = arena.Alloc<CraftNode>();
+        newNode->outputType = ItemType.Stick;
+        newNode->amountNeeded = 99;
+    
+        // Now node1's memory has been overwritten (same memory address as newNode)
+        Debug.Log($"After New Alloc - Node1 NOW: {node1->outputType}, Amount: {node1->amountNeeded}");
+        // Shows: Stick, 99 (because newNode overwrote node1's memory!)
+    
+        Debug.Log($"NewNode address: {(long)newNode}");
+        Debug.Log($"Node1 address: {(long)node1}");
+        // These addresses are THE SAME!
     }
     
     /// <summary>
