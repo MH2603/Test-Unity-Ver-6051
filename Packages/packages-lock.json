@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.boxqkrtm.ide.cursor": {
+      "version": "https://github.com/boxqkrtm/com.unity.ide.cursor.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
+      "hash": "38fecf55e4fd94ccfe58a92ed8ad1a529ba1694e"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.8",
       "depth": 0,
@@ -202,6 +211,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.yasirkula.speechtotext": {
+      "version": "https://github.com/yasirkula/UnitySpeechToText.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "511736fbefd300c0ef169689f0851e99357976c3"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
