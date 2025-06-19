@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d706ce248a77740149b2f83e32d67597
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163359
+  packageName: Mobile screen resolutions
+  packageVersion: 1.1
+  assetPath: Assets/Plugins/MobileScreenResolutions/Resources/resolutions.json
+  uploadId: 357901

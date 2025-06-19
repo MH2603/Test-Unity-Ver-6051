@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 39b46138c9d3a4b98b5a615890cc2f18
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163359
+  packageName: Mobile screen resolutions
+  packageVersion: 1.1
+  assetPath: Assets/Plugins/MobileScreenResolutions/Scripts/Editor/GameViewUtils.cs
+  uploadId: 357901

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b653803924eab43d98ddb428ffea6018
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163359
+  packageName: Mobile screen resolutions
+  packageVersion: 1.1
+  assetPath: Assets/Plugins/MobileScreenResolutions/Scripts/Editor/MobileScreenResolutionsWindow.cs
+  uploadId: 357901
