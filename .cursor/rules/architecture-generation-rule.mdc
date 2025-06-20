@@ -1,0 +1,270 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Unity Game Development Architecture Requirement Document (ARD) Generation Rules
+
+## Context
+You are assisting a Unity Game Developer in creating comprehensive Architecture Requirement Documents (ARDs) for Unity game projects. These documents should be thorough, professional, and follow industry best practices for game architecture documentation.
+
+## ARD Generation Rules
+
+When asked to create an Architecture Requirement Document for a Unity game project, generate a Markdown (.md) file with the following structure and content:
+
+### Document Header
+```markdown
+# Architecture Requirement Document (ARD)
+## [Project Name]
+
+**Document Version:** X.X  
+**Date:** [Current Date]  
+**Author(s):** [Developer Name(s)]  
+**Project Phase:** [Planning/Development/Production]  
+**Unity Version:** [Specify Unity Version]  
+```
+
+### Required Sections
+
+#### 1. Executive Summary
+- Brief project overview (2-3 paragraphs)
+- Key architectural decisions summary
+- Target platforms and audience
+- Project scope and constraints
+
+#### 2. Project Overview
+- **Game Genre:** [Specify genre and sub-genre]
+- **Target Platforms:** [PC, Mobile, Console, VR/AR, etc.]
+- **Target Audience:** [Age group, gaming experience level]
+- **Project Timeline:** [Development phases and milestones]
+- **Team Size:** [Expected team composition]
+- **Technical Constraints:** [Budget, performance, platform limitations]
+
+#### 3. Architectural Principles and Drivers
+- **Performance Requirements:** [Target FPS, memory constraints, loading times]
+- **Scalability Needs:** [Content expansion, platform scaling]
+- **Maintainability Goals:** [Code organization, modularity]
+- **Security Considerations:** [Data protection, anti-cheat, privacy]
+- **Accessibility Requirements:** [UI scaling, input methods, localization]
+
+#### 4. Unity Technical Stack
+- **Unity Version:** [Specific version and reasoning]
+- **Rendering Pipeline:** [Built-in/URP/HDRP with justification]
+- **Input System:** [Legacy/New Input System]
+- **Audio System:** [Unity Audio/Third-party solutions]
+- **Physics Engine:** [Unity Physics/Havok/Custom]
+- **Networking:** [Netcode for GameObjects/Mirror/Photon/Custom]
+- **Third-party Libraries:** [List essential plugins and assets]
+
+#### 5. System Architecture Overview
+- **High-level System Diagram:** [Create or describe main system components]
+- **Data Flow Architecture:** [How data moves through the system]
+- **Scene Management Strategy:** [Additive loading, scene organization]
+- **Memory Management Approach:** [Object pooling, garbage collection strategy]
+
+#### 6. Core Gameplay Systems Architecture
+
+##### 6.1 Game State Management
+- State machine architecture (Game States: Menu, Gameplay, Pause, etc.)
+- Scene transition management
+- Save/Load system architecture
+
+##### 6.2 Player Controller System
+- Input handling architecture
+- Character movement system
+- Camera control system
+- Animation system integration
+
+##### 6.3 Game Logic Systems
+- **Entity Component System (ECS):** [If using DOTS/Custom ECS]
+- **MonoBehaviour Architecture:** [Traditional Unity approach]
+- **Event System:** [UnityEvents/Custom Event Bus/Observer Pattern]
+- **Game Rules Engine:** [How game rules are implemented]
+
+##### 6.4 AI Systems
+- AI behavior architecture (State Machines/Behavior Trees/GOAP)
+- Pathfinding system (NavMesh/A*/Custom)
+- AI perception and decision-making
+
+##### 6.5 Combat/Interaction Systems
+- Damage calculation system
+- Collision detection and response
+- Interaction system architecture
+
+#### 7. Data Management Architecture
+
+##### 7.1 Game Data Structure
+- **Configuration Data:** [ScriptableObjects/JSON/XML structure]
+- **Runtime Data:** [Player progress, settings, game state]
+- **Asset References:** [Addressables/Resources management]
+
+##### 7.2 Persistence Strategy
+- Save system architecture
+- Cloud save integration (if applicable)
+- Data serialization approach
+- Backup and recovery mechanisms
+
+##### 7.3 Content Management
+- Asset pipeline organization
+- Asset bundling strategy (Addressables/AssetBundles)
+- Dynamic content loading
+- Localization data management
+
+#### 8. User Interface (UI) Architecture
+
+##### 8.1 UI Framework
+- **UI System:** [uGUI/UI Toolkit/Third-party]
+- **Screen Management:** [UI navigation and state management]
+- **Responsive Design:** [Multi-resolution support]
+
+##### 8.2 UI Components
+- Menu system architecture
+- HUD and gameplay UI
+- Settings and options UI
+- Inventory/Equipment UI (if applicable)
+
+##### 8.3 UI Data Binding
+- Model-View-Controller (MVC) pattern
+- Data binding strategies
+- UI event handling
+
+#### 9. Audio Architecture
+- **Audio Manager System:** [Centralized audio control]
+- **Music System:** [Background music management]
+- **Sound Effects System:** [SFX pooling and management]
+- **3D Audio:** [Spatial audio implementation]
+- **Audio Optimization:** [Compression, streaming, memory management]
+
+#### 10. Graphics and Rendering Architecture
+
+##### 10.1 Rendering Strategy
+- Rendering pipeline choice justification
+- Lighting system architecture
+- Shader management strategy
+- Post-processing pipeline
+
+##### 10.2 Visual Effects
+- Particle system architecture
+- Animation system organization
+- Visual effects optimization
+
+##### 10.3 Asset Optimization
+- Texture management and optimization
+- Model LOD (Level of Detail) strategy
+- Asset compression strategies
+
+#### 11. Platform-Specific Considerations
+
+##### 11.1 Performance Optimization
+- Target platform performance requirements
+- Optimization strategies per platform
+- Profiling and monitoring approach
+
+##### 11.2 Platform Features
+- Platform-specific APIs integration
+- Input method variations
+- Platform store integration (achievements, leaderboards)
+
+#### 12. Networking Architecture (If Applicable)
+- **Network Topology:** [Client-Server/Peer-to-Peer]
+- **Synchronization Strategy:** [State synchronization approach]
+- **Connection Management:** [Matchmaking, reconnection]
+- **Anti-cheat Measures:** [Server validation, encryption]
+
+#### 13. Security and Anti-Cheat
+- Code obfuscation strategy
+- Asset protection measures
+- Network security (if multiplayer)
+- Save file integrity protection
+
+#### 14. Testing and Quality Assurance Architecture
+- Unit testing framework integration
+- Automated testing strategy
+- Performance testing approach
+- Bug tracking and reporting system
+
+#### 15. Build and Deployment Pipeline
+- **Build Automation:** [CI/CD setup]
+- **Version Control Strategy:** [Git workflow, branching strategy]
+- **Release Management:** [Staging, production deployment]
+- **Asset Management:** [LFS usage, binary asset handling]
+
+#### 16. Monitoring and Analytics
+- Performance monitoring tools
+- Crash reporting system
+- Player analytics integration
+- A/B testing framework (if applicable)
+
+#### 17. Scalability and Future Considerations
+- Content expansion architecture
+- New platform adaptation strategy
+- Feature addition methodology
+- Technical debt management
+
+#### 18. Risk Assessment and Mitigation
+- Technical risks identification
+- Performance risks and mitigation
+- Platform-specific risks
+- Third-party dependency risks
+
+#### 19. Development Guidelines and Standards
+- Code style and formatting standards
+- Asset naming conventions
+- Directory structure standards
+- Documentation requirements
+
+#### 20. Appendices
+- **Glossary:** [Technical terms and abbreviations]
+- **References:** [External documentation, Unity documentation links]
+- **Version History:** [Document change log]
+
+## Content Generation Guidelines
+
+### Language and Tone
+- Use professional, technical language
+- Be specific and actionable
+- Include reasoning for architectural decisions
+- Provide concrete examples where applicable
+
+### Technical Depth
+- Include high-level architectural decisions
+- Specify Unity-specific implementation details
+- Reference relevant Unity documentation
+- Include performance considerations
+
+### Formatting
+- Use proper Markdown formatting
+- Include code blocks for configuration examples
+- Use tables for comparison matrices
+- Include diagrams descriptions (suggest Mermaid format)
+
+### Validation Criteria
+Each section should answer:
+- **What:** What is being implemented
+- **Why:** Why this approach was chosen
+- **How:** How it will be implemented in Unity
+- **When:** When in the development cycle it applies
+- **Who:** Who is responsible for implementation
+
+## Example Usage Patterns
+
+When generating an ARD:
+1. Always start with the complete document header
+2. Customize content based on project specifics mentioned
+3. Include Unity version-specific considerations
+4. Provide platform-specific sections when relevant
+5. Include performance metrics and targets
+6. Reference Unity best practices and documentation
+7. Suggest concrete Unity assets/packages when appropriate
+
+## Quality Checklist
+- ✅ All required sections are present
+- ✅ Unity-specific details are included
+- ✅ Performance requirements are specified
+- ✅ Platform considerations are addressed
+- ✅ Technical risks are identified
+- ✅ Implementation guidelines are clear
+- ✅ Document is properly formatted in Markdown
+- ✅ Content is actionable and specific
+
+Remember: The ARD should serve as a comprehensive blueprint for the entire development team, providing clear guidance on architectural decisions and implementation strategies specific to Unity game development. 
