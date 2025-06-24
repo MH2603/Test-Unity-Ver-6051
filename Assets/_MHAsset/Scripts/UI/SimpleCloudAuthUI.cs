@@ -243,3 +243,4 @@ public class SimpleCloudAuthUI : MonoBehaviour
 
     #endregion
 } 
+

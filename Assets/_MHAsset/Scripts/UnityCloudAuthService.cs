@@ -17,6 +17,13 @@ namespace CloudAuth
         SigningOut,
         Error
     }
+    
+    [Serializable]
+    public struct PlayerProfile
+    {
+        public PlayerInfo playerInfo;
+        public string Name;
+    }
 
     public class UnityCloudAuthService : MonoBehaviour
     {
@@ -77,7 +84,7 @@ namespace CloudAuth
                 SubscribeToEvents();
                 SetStatus(AuthStatus.SignedOut);
                 
-                LogDebug("Unity Services initialized successfully");
+                LogDebug($"Unity Services initialized successfully");
                 return true;
             }
             catch (Exception ex)
