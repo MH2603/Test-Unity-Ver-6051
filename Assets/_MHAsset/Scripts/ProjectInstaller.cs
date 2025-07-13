@@ -1,5 +1,6 @@
 using Reflex.Core;
 using UnityEngine;
+using Reflex.Attributes;
 
 /// <summary>
 /// Project-level dependency injection installer using Reflex framework.
@@ -7,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class ProjectInstaller : MonoBehaviour, IInstaller
 {
+
     /// <summary>
     /// Configures dependency injection bindings for the project.
     /// </summary>
@@ -18,8 +20,10 @@ public class ProjectInstaller : MonoBehaviour, IInstaller
         
         builder.AddSingleton(new Logger(), typeof(ICustomLogger));
         builder.AddSingleton(new Logger());
-        
+        builder.AddSingleton("Load Scene");
+
         Debug.Log("Setup project-level dependency injection bindings.");
+
     }
 }
 

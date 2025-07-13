@@ -5,7 +5,7 @@ using Reflex.Attributes;
 public class Greeter : MonoBehaviour
 {
     [Inject] private readonly IEnumerable<string> _strings;
-    [Inject] public Logger _logger;
+    [Inject] public readonly Logger _logger;
     
     private void Start()
     {
@@ -14,7 +14,7 @@ public class Greeter : MonoBehaviour
 
     public void Greet()
     {
-        //Debug.Log(string.Join(" ", _strings)); // Should log: "Hello"
+        Debug.Log(string.Join(" ", _strings)); // Should log: "Hello"
         
         _logger.Log("Hello");
     }
