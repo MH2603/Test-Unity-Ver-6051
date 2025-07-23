@@ -916,11 +916,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 303e7fbd-290c-4301-bd0d-1032e2aa6f12
+  cloudProjectId: db170e06-108e-4eec-b366-7ed3d3ea2110
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Test Ver 6051
-  organizationId: unity_20f14032d68582dc0e6d
+  organizationId: minhhai260303
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
