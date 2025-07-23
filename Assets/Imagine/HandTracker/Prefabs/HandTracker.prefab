@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2906766844110583604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2906766844110583603}
+  - component: {fileID: 2906766844110583602}
+  m_Layer: 0
+  m_Name: HandTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2906766844110583603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906766844110583604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2906766844110583602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906766844110583604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792eec98e686744f39bfc5b83fd5649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handPoseStr: 0;Right;-10.200016975402832,-7.407998085021973,40.857730865478516,0.13899265229701996,-0.2403952181339264,-0.9606722593307495,0.3129515051841736,0.9461442828178406,-0.08289989084005356,0.9288632869720459,-0.2891213595867157,0.2067391574382782,
+  handPoseStr2: 0;Left;0.7065512792624422,0.10228967666625977,0.7697799824812613,0.3765363097190857
+  trackerCam: {fileID: 0}
+  trackerMode: 0
+  ts3d:
+    trackIndividualJoints: 1
+    handThickness: 1.05
+    defaultCanonicalHandLength: 0.8918802
+  debugHands: 1
+  debugLinesPrefab: {fileID: -4755626176051769797, guid: 2dbb89a4673d44a45a9c1236ddebab92, type: 3}

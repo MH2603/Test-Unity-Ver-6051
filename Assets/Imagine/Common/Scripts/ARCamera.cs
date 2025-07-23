@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine.Events;
 using System.Runtime.InteropServices;
 
@@ -29,19 +26,6 @@ namespace Imagine.WebAR
         [DllImport("__Internal")] private static extern bool IsWebcamPermissionGranted();
         [DllImport("__Internal")] private static extern void WebGLFlipCamera();
         [DllImport("__Internal")] private static extern bool WebGLIsCameraFlipped();
-#endif
-
-#if UNITY_EDITOR
-        static Mesh _editorSceneViewMesh;
-        public static Mesh EditorSceneViewMesh{
-            get{
-                if(_editorSceneViewMesh == null){
-                    Debug.Log("try get ARCamGizmo.mesh");
-                    _editorSceneViewMesh = UnityEditor.AssetDatabase.LoadAssetAtPath<Mesh>("Assets/Imagine/Common/Models/ARCamGizmo.mesh");
-                }
-                return _editorSceneViewMesh;
-            }
-        }
 #endif
 
          public enum VideoPlaneMode {
@@ -341,13 +325,6 @@ namespace Imagine.WebAR
             orientation = message == "PORTRAIT" ? ARCameraOrientation.PORTRAIT : ARCameraOrientation.LANDSCAPE;
             OnCameraOrientationChanged?.Invoke(orientation);
         }
-
-        #if UNITY_EDITOR
-        void OnDrawGizmos(){
-            Gizmos.color = new Color(1,1,1,0.5f);
-            Gizmos.DrawMesh(EditorSceneViewMesh, 0, transform.position, transform.rotation);
-        }
-#endif
     }
 }
 

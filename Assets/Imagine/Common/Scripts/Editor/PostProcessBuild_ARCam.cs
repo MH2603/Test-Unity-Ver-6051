@@ -30,7 +30,6 @@ namespace Imagine.WebAR.Editor
             //     htmlLines = ReplaceFacingMode(htmlLines, "");
             // }
 
-
             File.WriteAllLines(buildPath + "/index.html", htmlLines); 
         }
 
