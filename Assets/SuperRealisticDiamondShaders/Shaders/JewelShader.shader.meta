@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6aa8c547a830c6944a78a6934111b781
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _ShapeTex: {instanceID: 0}
+  - _Environment: {fileID: 8900000, guid: 43857f64b9cb80249bfee47fc411e27d, type: 3}
+  - ReflectionCube: {fileID: 8900000, guid: 5fb5922f716d8d545b0c1dea1fecc2a5, type: 3}
+  - NormalMap: {instanceID: 0}
+  - _Specular: {instanceID: 0}
+  - DifuseMask: {instanceID: 0}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Shaders/JewelShader.shader
+  uploadId: 540033

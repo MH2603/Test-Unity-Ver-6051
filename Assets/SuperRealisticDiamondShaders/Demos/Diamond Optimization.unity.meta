@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 036b4a213c67db949b8467d77dacd7a7
+timeCreated: 1517461216
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Demos/Diamond Optimization.unity
+  uploadId: 540033

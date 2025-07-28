@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9bff490a3547fef4d834c2ebdb3e7c9b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Material/DiamondRing3.mat
+  uploadId: 540033

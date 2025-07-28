@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5dd3efd22952bb24e918bc7ba7b6ed7a
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 2052
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Shaders/ComputeShaders/DeleteBlocksFlares.compute
+  uploadId: 540033

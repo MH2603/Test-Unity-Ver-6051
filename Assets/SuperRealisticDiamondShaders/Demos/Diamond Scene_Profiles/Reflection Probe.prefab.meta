@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c07e884bed9c6247998eab4f87f7081
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Demos/Diamond Scene_Profiles/Reflection
+    Probe.prefab
+  uploadId: 540033

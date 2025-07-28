@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 88221f1918e870943b616248bf6a9650
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Demos/Diamond Scene2/LightingData.asset
+  uploadId: 540033

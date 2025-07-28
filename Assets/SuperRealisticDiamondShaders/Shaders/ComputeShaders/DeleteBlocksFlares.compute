@@ -1,0 +1,212 @@
+﻿#pragma kernel CSMain
+#include "UnityCG.cginc"
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+//Texture2D<float4> ScreenRender;
+
+RWTexture2D<float4> ScreenRender;
+RWTexture2D<float4> ScreenRender2;
+
+CBUFFER_START(Params)
+Texture2D<float4> Source;
+
+Texture2D<float4> PointsTex;
+SamplerState LinearClamp;
+float _BlurAmount;
+float2 uvSize;
+float FlareIntensity;
+
+int FlareOffsetCount;
+CBUFFER_END
+
+
+float Remap(float value, float min1, float max1, float min2, float max2)
+{
+    return (min2 + (value - min1) * (max2 - min2) / (max1 - min1));
+}
+
+float4 Blur( float2 uv, float2 offset, float blur_)
+{
+    float ads = 1;
+    float4 col = 0;
+  //  float4 col = pow(PointsTex.SampleLevel(LinearClamp, uv, 0), 0.454545);
+
+
+    for (int i = 1; i < FlareOffsetCount; i++)
+    {
+
+        float2 ofs = float2(i * blur_ * offset);
+
+        int ii = max(1, i);
+        
+
+        float3 FG = PointsTex.SampleLevel(LinearClamp, float2(uv.x + ofs.x, uv.y + ofs.y),0) / lerp((ii / 1.9), 1, 0.95);
+
+        float FlareOffsetCount_ = Remap(i, 0, FlareOffsetCount, 0.5, 1);
+
+					//col += pow( tex2D(tex, float2(uv.x + ofs.x, uv.y + ofs.y)) / lerp((ii / 1.9), 1, 0.95), 1 + (i / 7)) / 2;
+			//		col.rgb += pow(FG,  (1 + (i / 7)) / 2) + (FlareOffsetCount);
+
+        col.rgb += FG * (1 - FlareOffsetCount_);
+
+
+    }
+
+
+    return col / 9;
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    float2 uv = float2(id.x / uvSize.x, id.y / uvSize.y);
+    
+    
+    
+    int2 idN = id.xy;
+    int2 idOld = id.xy;
+    int countFound;
+    
+    for (int i = 0; i < 5; i++)
+    {
+        if (PointsTex[idN + float2(1, 0)].x > 0 )
+        {
+            if (idOld.x != (idN + float2(1, 0)).x && idOld.y != (idN + float2(1, 0)).y)
+            {
+                idN = idN + float2(1, 0);
+                idOld = idN;
+                countFound++;
+                
+                
+            }
+        }
+        if (PointsTex[idN + float2(1, -1)].x > 0)
+        {
+            if (idOld.x != (idN + float2(1, -1)).x && idOld.y != (idN + float2(1, -1)).y)
+            {
+                idN = idN + float2(1, -1);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        if (PointsTex[idN + float2(0, -1)].x > 0)
+        {
+            if (idOld.x != (idN + float2(0, -1)).x && idOld.y != (idN + float2(0, -1)).y)
+            {
+                idN = idN + float2(0, -1);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        if (PointsTex[idN + float2(-1, -1)].x > 0)
+        {
+            if (idOld.x != (idN + float2(-1, -1)).x && idOld.y != (idN + float2(-1, -1)).y)
+            {
+                idN = idN + float2(-1, -1);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        if (PointsTex[idN + float2(-1, 0)].x > 0)
+        {
+            if (idOld.x != (idN + float2(-1, 0)).x && idOld.y != (idN + float2(-1, 0)).y)
+            {
+                idN = idN + float2(-1, 0);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        
+        if (PointsTex[idN + float2(-1, 1)].x > 0)
+        {
+            if (idOld.x != (idN + float2(-1, 1)).x && idOld.y != (idN + float2(-1, 1)).y)
+                
+            {
+                idN = idN + float2(-1, 1);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        
+        if (PointsTex[idN + float2(0, 1)].x > 0)
+            
+        {
+            if (idOld.x != (idN + float2(0, 1)).x && idOld.y != (idN + float2(0, 1)).y)
+            {
+                idN = idN + float2(0, 1);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        if (PointsTex[idN + float2(1, 1)].x > 0)
+        {
+            if (idOld.x != (idN + float2(1, 1)).x && idOld.y != (idN + float2(1, 1)).y)
+                
+            {
+                idN = idN + float2(1, 1);
+                idOld = idN;
+                countFound++;
+            }
+        }
+        
+    }
+    
+    if (countFound > 3)
+    {
+        ScreenRender[id.xy] = 0;
+        ScreenRender2[id.xy] = PointsTex[id.xy];
+    }
+    else
+    {
+        ScreenRender[id.xy] = PointsTex[id.xy];
+    }
+        
+        
+    
+    if (countFound == 0)
+    {
+
+    //    ScreenRender2[id.xy] = PointsTex[id.xy] * 5;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // TODO: insert actual code here!
+    
+  //  ScreenRender[id.xy] = float4(1, 1, 1, 1);
+    /*
+    float4 col_ = 0;
+    
+    col_ += Blur(uv, float2(-0.1, -0.1), _BlurAmount / 22);
+    col_ += Blur(uv, float2(0.1, 0.1), _BlurAmount / 22);
+    
+    col_ += Blur(uv, float2(-0.1, 0.1), _BlurAmount / 22);
+    col_ += Blur(uv, float2(0.1, -0.1), _BlurAmount / 22);
+    
+    col_ = clamp(col_ * FlareIntensity, 0, 0.2) * FlareIntensity;
+
+    ScreenRender[id.xy] = pow(Source.SampleLevel(LinearClamp, uv, 0), 0.454545) + col_;
+    */
+    
+    
+    
+    
+ //   ScreenRender[id.xy] = pow(Source.SampleLevel(LinearClamp, uv, 0), 0.454545) + pow(PointsTex.SampleLevel(LinearClamp, uv, 0), 0.454545);
+    
+    //  ScreenRender[id.xy] = pow(Source[id.xy], 0.454545) + PointsTex[id.xy / FlareOffsetCount]; PointsTex.SampleLevel(LinearClamp,
+    
+ //   ScreenRender[id.xy] = float4(id.x & id.y, (id.x & 15) / 15.0, (id.y & 15) / 15.0, 0.0);   
+}

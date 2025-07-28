@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1d45ddaa3c65cf149bf386a764de0659
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Shaders/JewelShaderLow.shader
+  uploadId: 540033

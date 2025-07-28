@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 31b0ff1b9a4b33546814e09688617dd1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Material/RoundCutDiamond.mat
+  uploadId: 540033

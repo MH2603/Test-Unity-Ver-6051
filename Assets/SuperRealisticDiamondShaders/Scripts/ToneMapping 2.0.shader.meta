@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 60e4fa910042d2b4090b503552ded7dc
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Scripts/ToneMapping 2.0.shader
+  uploadId: 540033

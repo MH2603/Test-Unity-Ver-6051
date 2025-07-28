@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ac6cf198a4b79e040860080a9684ff1f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Shaders/DiamondScreenGet LWRP_URP.shader
+  uploadId: 540033

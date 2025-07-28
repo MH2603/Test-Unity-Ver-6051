@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c1f4732f7c816e64fb0a59c4fda0b217
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Material/Optimization Material.mat
+  uploadId: 540033

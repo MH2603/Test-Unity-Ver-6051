@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9c60f9b0918fb44ab8570e087eee8de
+timeCreated: 1517461216
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Demos/Diamond Scene.unity
+  uploadId: 540033

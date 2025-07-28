@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c20dc703aee991043a42f95925cb1936
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/Material/Shader Graphs_CoockieLight.mat
+  uploadId: 540033

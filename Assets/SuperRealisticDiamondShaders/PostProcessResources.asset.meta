@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57fd14143a4acc044805f2f64554db30
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 198006
+  packageName: Super Realistic Diamond Shaders
+  packageVersion: 1.3
+  assetPath: Assets/SuperRealisticDiamondShaders/PostProcessResources.asset
+  uploadId: 540033

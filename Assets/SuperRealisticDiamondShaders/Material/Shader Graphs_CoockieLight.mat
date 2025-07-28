@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_CoockieLight
+  m_Shader: {fileID: -6465566751694194690, guid: fcf7713995778f643915f2c2301f3f64,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_39AE918C:
+        m_Texture: {fileID: 2800000, guid: c417d3265556afd4581805ec3e6c675f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_E8A24A5B:
+        m_Texture: {fileID: 2800000, guid: 874989eedaac7244a8f6311334417048, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_6EB6114F: 4
+    - Vector1_B3C4D44F: -8.66
+    - Vector1_BC95973B: 0
+    m_Colors:
+    - Color_B7FC9A56: {r: 0.81, g: 0.81, b: 0.81, a: 0}
+    - Color_BD1C944F: {r: 0.48007002, g: 0.5291547, b: 0.61, a: 0}
+    - Vector4_438B4941: {r: -0.43, g: -0.69, b: 0, a: 0}
